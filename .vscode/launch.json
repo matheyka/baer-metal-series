@@ -1,0 +1,29 @@
+{
+        "configurations": [
+                {
+                        "name": "Debug Application",
+                        "cwd": "${workspaceFolder}/app",
+                        "executable": "./firmware.elf",
+                        "servertype": "stutil",
+                        "request": "launch",
+                        "type": "cortex-debug",
+                        "device": "STM32F030R8",
+                        "runToEntryPoint": "main",
+                        "interface": "swd",
+                        "preLaunchTask": "build_debug",
+                        "v1": true
+                },
+                {
+                        "name": "Attach to Application",
+                        "cwd": "${workspaceFolder}/app",
+                        "executable": "./firmware.elf",
+                        "servertype": "stutil",
+                        "request": "attach",
+                        "type": "cortex-debug",
+                        "device": "STM32F030R8",
+                        "runToEntryPoint": "main",
+                        "interface": "swd",
+                        "v1": true
+                }
+        ]
+}
