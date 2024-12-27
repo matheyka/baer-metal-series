@@ -21,7 +21,7 @@ ARCH_FLAGS	= -mthumb -mcpu=cortex-m0 $(FP_FLAGS)
 ###############################################################################
 # Linkerscript
 
-LDSCRIPT = linkerscript.ld
+LDSCRIPT	= linkerscript.ld
 LDLIBS		+= -l$(LIBNAME)
 LDFLAGS		+= -L$(OPENCM3_DIR)/lib
 
@@ -54,6 +54,8 @@ CSTD		?= -std=c99
 # Source files
 
 OBJS		+= $(SRC_DIR)/$(BINARY).o
+OBJS		+= $(SRC_DIR)/core/system.o
+OBJS		+= $(SRC_DIR)/core/timer.o
 
 ###############################################################################
 # C flags
