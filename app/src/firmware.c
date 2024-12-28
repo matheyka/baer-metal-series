@@ -1,11 +1,19 @@
+#include <libopencm3/cm3/scb.h>
 #include <libopencm3/stm32/rcc.h>
 #include <libopencm3/stm32/gpio.h>
 
 #include "core/system.h"
 #include "core/timer.h"
 
+#define BOOTLOADER_SIZE (0x8000U)
+
 #define LED_PORT        (GPIOA)
 #define LED_PIN         (GPIO6)
+
+static void fw_vector_setup(void)
+{
+        SCB_VTOR = BOOTLOADER_SIZE;
+}
 
 static void fw_gpio_setup(void)
 {
@@ -16,6 +24,7 @@ static void fw_gpio_setup(void)
 
 int main(void)
 {
+        fw_vector_setup();
         system_setup();
         timer_setup();
         fw_gpio_setup();

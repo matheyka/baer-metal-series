@@ -10,6 +10,10 @@
                 "pins.h": "c",
                 "sync.h": "c",
                 "ring-buffer.h": "c",
-                "flash_common_all.h": "c"
+                "flash_common_all.h": "c",
+                "memorymap.h": "c",
+                "common-defines.h": "c",
+                "system.h": "c",
+                "gpio.h": "c"
         }
 }
