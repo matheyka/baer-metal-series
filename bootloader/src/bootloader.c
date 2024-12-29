@@ -16,7 +16,7 @@ static void bootloader_jump_to_main(void)
          * reset_vector_entry is a pointer to a location in memory that contains
          * the address of the reset handler (entry point).
          */
-        uint32_t* reset_vector_entry = (uint32_t*)(MAIN_APP_START_ADDRESS) + 4U;
+        uint32_t* reset_vector_entry = (uint32_t*)(MAIN_APP_START_ADDRESS + 4U);
         /*
          * Read value at address of reset_vector_entry
          * Interpret value as pointer.
