@@ -15,5 +15,6 @@
                 "common-defines.h": "c",
                 "system.h": "c",
                 "gpio.h": "c"
-        }
+        },
+        "cortex-debug.variableUseNaturalFormat": true
 }
