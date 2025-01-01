@@ -9,11 +9,11 @@
 #define BOOTLOADER_SIZE (0x8000U)
 
 #define LED_PORT        (GPIOA)
-#define LED_PIN         (GPIO6)
+#define LED_PIN         (GPIO5)
 
 static void fw_vector_setup(void)
 {
-        SCB_VTOR = BOOTLOADER_SIZE;
+        SCB_VTOR = (FLASH_BASE + BOOTLOADER_SIZE);
 }
 
 static void fw_gpio_setup(void)

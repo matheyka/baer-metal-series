@@ -7,7 +7,7 @@
                         "servertype": "stutil",
                         "request": "launch",
                         "type": "cortex-debug",
-                        "device": "STM32F030R8",
+                        "device": "STM32F401RE",
                         "runToEntryPoint": "main",
                         "interface": "swd",
                         "preLaunchTask": "build_debug",
@@ -20,7 +20,7 @@
                         "servertype": "stutil",
                         "request": "attach",
                         "type": "cortex-debug",
-                        "device": "STM32F030R8",
+                        "device": "STM32F401RE",
                         "runToEntryPoint": "main",
                         "interface": "swd",
                         "v1": true
